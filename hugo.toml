@@ -1,0 +1,29 @@
+baseURL = 'https://bioinfo.app/'
+languageCode = 'zh-cn'
+title = '北京生信助力科技有限公司'
+
+[params]
+  description = "北京生信助力科技有限公司专注于生物信息学数据分析、临床数据挖掘和软件开发，开发用于科学和医学项目的高性能计算和深度学习算法，提供科研相关服务。"
+  author = "北京生信助力科技有限公司"
+  email = "contact@bioinfo.app"
+  phone = "+86-xxx-xxxx-xxxx"
+  address = "北京市"
+  keywords = "生物信息学, 数据分析, 临床数据挖掘, 软件开发, 高性能计算, 深度学习, 科研服务"
+
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    isPlainText = true
+    notAlternative = true 

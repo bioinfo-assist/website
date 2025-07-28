@@ -1,137 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="北京生信助力科技有限公司专注于生物信息学数据分析、临床数据挖掘和软件开发，开发用于科学和医学项目的高性能计算和深度学习算法，提供科研相关服务。">
-  <meta name="keywords" content="生物信息学, 数据分析, 临床数据挖掘, 软件开发, 高性能计算, 深度学习, 科研服务">
-  <meta name="author" content="北京生信助力科技有限公司">
-
-  <!-- Open Graph meta tags for bioinfo.app -->
-  <meta property="og:title" content="北京生信助力科技有限公司">
-  <meta property="og:description" content="专注于生物信息学数据分析、临床数据挖掘和软件开发">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bioinfo.app">
-  <meta property="og:image" content="https://bioinfo.app/images/logo-512x512.png">
-  <meta property="og:url" content="https://bioinfo-assist.com">
-  <meta property="og:image" content="https://bioinfo-assist.com/images/logo-512x512.png">
-  <meta property="og:url" content="https://bioinfo-assist.com.cn">
-  <meta property="og:image" content="https://bioinfo-assist.com.cn/images/logo-512x512.png">
-
-  <!-- Twitter Card meta tags for bioinfo.app -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="北京生信助力科技有限公司">
-  <meta name="twitter:description" content="专注于生物信息学数据分析、临床数据挖掘和软件开发">
-  <meta name="twitter:image" content="https://bioinfo.app/images/logo-512x512.png">
-  <meta name="twitter:image" content="https://bioinfo-assist.com/images/logo-512x512.png">
-  <meta name="twitter:image" content="https://bioinfo-assist.com.cn/images/logo-512x512.png">
-
-  <!-- Canonical links for different domains -->
-  <link rel="canonical" href="https://bioinfo.app">
-  <link rel="canonical" href="https://bioinfo-assist.com">
-  <link rel="canonical" href="https://bioinfo-assist.com.cn">
-
-  <title>北京生信助力科技有限公司</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    html {
-      scroll-padding-top: 62px;
-    }
-
-    body {
-      padding-top: 56px;
-      background-color: #F5F5F5;
-      color: #333;
-      line-height: 1.8;
-    }
-
-    p {
-      text-indent: 2em;
-    }
-
-    .navbar {
-      background-color: #1A237E;
-    }
-
-    .navbar-brand,
-    .nav-link {
-      color: #FFF !important;
-    }
-
-    .navbar-brand:hover,
-    .nav-link:hover {
-      color: #64B5F6 !important;
-    }
-
-    .jumbotron {
-      background-color: #64B5F6;
-      color: #FFF;
-    }
-
-    .jumbotron .btn-primary {
-      background-color: #43A047;
-      border-color: #43A047;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      color: #1A237E;
-      margin-top: 40px;
-    }
-
-    .section-content {
-      background-color: #FFF;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .footer {
-      background-color: #1A237E;
-      color: #FFF;
-      padding: 20px 0;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">生信助力</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">关于我们</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">服务产品</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">联系我们</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+{{ define "main" }}
+  {{ partial "header.html" . }}
 
   <div class="jumbotron text-center" id="home">
     <img src="images/logo-512x512.png" class="logo" alt="公司logo">
-    <h1 class="display-4">北京生信助力科技有限公司</h1>
+    <h1 class="display-4">{{ .Site.Title }}</h1>
     <p class="lead">专注于生物信息学数据分析、临床数据挖掘和软件开发</p>
     <hr class="my-4">
     <p>我们开发用于科学和医学项目的高性能计算和深度学习算法，并提供科研相关服务。</p>
@@ -141,7 +13,7 @@
   <div class="container">
     <h2 class="section-title" id="about">关于我们</h2>
     <div class="section-content">
-      <p>北京生信助力科技有限公司致力于推动生物信息学的发展。我们以“助力科研、提升效率、推动创新”为核心价值观，专注于为科研人员和机构提供高质量的生物信息学解决方案。</p>
+      <p>北京生信助力科技有限公司致力于推动生物信息学的发展。我们以"助力科研、提升效率、推动创新"为核心价值观，专注于为科研人员和机构提供高质量的生物信息学解决方案。</p>
       <p>
         我们专注于开发和优化高效的数据分析流程，帮助科研人员从海量数据中提取有价值的信息。无论是基因组、转录组、蛋白质组还是代谢组的数据，我们都能提供全面的分析服务。通过数据的高效处理和精确分析，我们助力科研人员在各自领域取得突破性进展。
       </p>
@@ -318,13 +190,5 @@
     </div>
   </div>
 
-  <div class="footer">
-    <p>&copy; 2024，北京生信助力科技有限公司，版权所有。</p>
-    <p><a class="link-light external-link" href="http://beian.miit.gov.cn/" target="_blank">京ICP备2023038041号-1</a></p>
-  </div>
-
-  <script src="js/jquery-3.7.1.slim.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+  {{ partial "footer.html" . }}
+{{ end }} 
