@@ -47,7 +47,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci --include=dev || true"
+        run: npm install
       - name: Build frontend assets with Vite
         run: npm run build:assets
       - name: Build with Hugo
