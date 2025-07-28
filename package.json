@@ -1,0 +1,33 @@
+{
+  "name": "bioinfo.app",
+  "version": "1.0.0",
+  "description": "专注于生物信息学数据分析、临床数据挖掘和软件开发。",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build && hugo --minify",
+    "dev": "vite build && hugo server --bind 0.0.0.0 --port 1313",
+    "build:assets": "vite build",
+    "dev:assets": "vite build --watch",
+    "preview": "vite preview",
+    "copy-assets": "node scripts/copy-assets.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bioinfo-assist/bioinfo.app.git"
+  },
+  "keywords": ["bioinformatics", "hugo", "bootstrap", "vite"],
+  "author": "北京生信助力科技有限公司",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bioinfo-assist/bioinfo.app/issues"
+  },
+  "homepage": "https://github.com/bioinfo-assist/bioinfo.app#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "vite": "^5.0.0"
+  }
+}

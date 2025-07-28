@@ -1,6 +1,7 @@
 # Hugo build output
 public/
 resources/
+static/assets/
 
 # Hugo cache
 .hugo_build.lock
@@ -14,6 +15,9 @@ js/
 images/
 index.html
 favicon.ico
+
+# Node.js
+node_modules/
 
 # OS generated files
 .DS_Store
@@ -37,9 +41,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
-
-# Node modules (if using any Node.js tools)
-node_modules/
 
 # Environment files
 .env

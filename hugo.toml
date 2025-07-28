@@ -17,13 +17,3 @@ title = '北京生信助力科技有限公司'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS"]
-
-[outputFormats]
-  [outputFormats.RSS]
-    mediaType = "application/rss+xml"
-    baseName = "feed"
-    isPlainText = true
-    notAlternative = true 
