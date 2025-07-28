@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "vite build && hugo --minify",
-    "dev": "vite build && hugo server --bind 0.0.0.0 --port 1313",
+    "dev": "vite build && hugo server --bind 0.0.0.0 --port 13131",
     "build:assets": "vite build",
     "dev:assets": "vite build --watch",
     "preview": "vite preview",

@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
-
-    <!-- SEO Meta Tags-->
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta name="keywords" content="{{ .Site.Params.keywords }}">
-    <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Open Graph meta tags -->
+    <title>{{ .Site.Title }}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="北京生信助力科技有限公司专注于检测软件系统开发、多组学生信分析、机器学习应用及智能文献分析平台，为试剂公司、科研机构和医疗机构提供专业的生物信息学解决方案。">
+    <meta name="keywords" content="生物信息学, 检测软件系统, IGV控件, 多组学分析, PRS分析, 机器学习, 智能文献分析, ACMG指南, 遗传变异评级">
+    <meta name="author" content="北京生信助力科技有限公司">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:description" content="专业的生物信息学解决方案提供商，专注于检测软件系统开发、多组学生信分析、机器学习应用及智能文献分析平台">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Site.BaseURL }}">
     <meta property="og:image" content="{{ .Site.BaseURL }}images/logo-512x512.png">
-
-    <!-- Twitter Card meta tags -->
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Site.Title }}">
-    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:description" content="专业的生物信息学解决方案提供商">
     <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo-512x512.png">
-
-    <!-- Canonical links -->
-    <link rel="canonical" href="{{ .Site.BaseURL }}">
-
+    
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Vite built CSS -->
+    
+    <!-- Local Bootstrap CSS -->
     <link href="assets/css/styles.css" rel="stylesheet">
-  </head>
-
-  <!-- Body -->
-  <body>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Optimized for Chinese -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
     {{ block "main" . }}{{ end }}
-
-    <!-- Vite built JS -->
+    
+    <!-- Local Bootstrap JS -->
     <script src="assets/js/main.js"></script>
-  </body>
-</html> 
+</body>
+</html>

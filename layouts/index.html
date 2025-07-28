@@ -1,193 +1,217 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
 
-  <div class="jumbotron text-center" id="home">
-    <img src="images/logo-512x512.png" class="logo" alt="公司logo">
-    <h1 class="display-4">{{ .Site.Title }}</h1>
-    <p class="lead">专注于生物信息学数据分析、临床数据挖掘和软件开发</p>
-    <hr class="my-4">
-    <p>我们开发用于科学和医学项目的高性能计算和深度学习算法，并提供科研相关服务。</p>
-    <a class="btn btn-primary btn-lg" href="#about" role="button">了解更多</a>
-  </div>
+  <section class="jumbotron text-center" id="home">
+    <div class="container">
+      <img src="images/logo-512x512.png" class="logo" alt="公司logo">
+      <h1 class="display-4">{{ .Site.Title }}</h1>
+      <p class="lead">专业的生物信息学解决方案提供商</p>
+      <hr class="my-4">
+      <p class="hero-description">专注于检测软件系统开发、多组学生信分析、机器学习应用及智能文献分析平台</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary btn-lg me-3" href="#about" role="button">
+          <i class="fas fa-rocket me-2"></i>了解更多
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="#services" role="button">
+          <i class="fas fa-cogs me-2"></i>核心服务
+        </a>
+      </div>
+    </div>
+  </section>
 
   <div class="container">
-    <h2 class="section-title" id="about">关于我们</h2>
-    <div class="section-content">
-      <p>北京生信助力科技有限公司致力于推动生物信息学的发展。我们以"助力科研、提升效率、推动创新"为核心价值观，专注于为科研人员和机构提供高质量的生物信息学解决方案。</p>
-      <p>
-        我们专注于开发和优化高效的数据分析流程，帮助科研人员从海量数据中提取有价值的信息。无论是基因组、转录组、蛋白质组还是代谢组的数据，我们都能提供全面的分析服务。通过数据的高效处理和精确分析，我们助力科研人员在各自领域取得突破性进展。
-      </p>
-      <p>个性化分析项目是我们的另一大特色。每一个科研项目都有其独特的需求和挑战，我们提供定制化的分析服务，确保每一个项目都能达到最佳效果。通过与客户的深入沟通和合作，我们最大限度地挖掘数据的潜力，为客户带来更多的研究成果。</p>
-      <p>
-        此外，我们致力于建立和维护一个强大的生物信息分析平台。这个平台不仅提供高效的计算资源，还提供丰富的工具和数据库支持，极大地提高科研人员的工作效率。我们希望通过这个平台，为更多科研人员提供便利，助力他们在各自的研究领域取得成功。
-      </p>
-      <p>
-        北京生信助力科技有限公司的名字不仅是一种标识，更是一种承诺。我们承诺将始终以客户为中心，提供高质量的服务和解决方案；持续创新，不断提升技术和服务水平；用专业知识和技术，助力每一位科研人员实现他们的研究目标。生信助力，将永远是科研人员最可靠的伙伴。
-      </p>
-    </div>
+    <section id="about" class="homepage-section">
+      <h2 class="section-title">
+        <i class="fas fa-dna me-3"></i>关于我们
+      </h2>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-lg-8">
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-brain me-2 text-primary"></i>专注生物信息学与人工智能融合创新，服务科研、医疗及生物企业，深度参与基因组、转录组等多组学项目，助力数据驱动的科学突破与产业升级。</li>
+              <li><i class="fa-solid fa-users-gear me-2 text-primary"></i>团队具备多组学分析、算法研发和软件工程经验，采用国际主流流程与AI技术，保障项目高效、可靠、可扩展，持续提升数据处理与分析能力。</li>
+              <li><i class="fa-solid fa-lightbulb me-2 text-primary"></i>为客户量身定制解决方案，推动科研成果转化与技术落地，已为多家机构提供高质量服务，持续提升生命科学领域的专业服务价值与行业影响力。</li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="stats-card">
+              <div class="stat-item">
+                <div class="stat-number">智能</div>
+                <div class="stat-label">AI+ML算法</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">科研级</div>
+                <div class="stat-label">分析标准</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">定制化</div>
+                <div class="stat-label">解决方案</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-dna"></i>
+              </div>
+              <h4>核心技术优势</h4>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> 检测软件系统开发与定制</li>
+                <li><i class="fas fa-check"></i> 多组学生信分析解决方案</li>
+                <li><i class="fas fa-check"></i> 机器学习在生物医学中的应用</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>服务领域</h4>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> 试剂公司检测系统定制</li>
+                <li><i class="fas fa-check"></i> 科研机构数据分析服务</li>
+                <li><i class="fas fa-check"></i> 医疗机构精准医疗解决方案</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <h2 class="section-title" id="services">服务产品</h2>
-    <div class="section-content">
-      <h3>生物信息学数据分析</h3>
-      <p>我们提供全面的生物信息学数据分析服务，包括基因组、转录组、蛋白质组和代谢组的数据处理和解读。我们的服务覆盖从数据获取、处理、分析到结果解释的各个环节，确保每一个步骤都能为客户提供最高质量的支持。</p>
-
-      <div class="col-10 offset-1">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>服务项目</th>
-              <th>详细描述</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>全基因组测序（WGS）</td>
-              <td>提供高覆盖度的全基因组测序和变异检测，适用于人类、动植物等多种样本。</td>
-            </tr>
-            <tr>
-              <td>外显子组测序（WES）</td>
-              <td>针对基因组编码区进行高效测序，识别致病变异和功能相关的变异。</td>
-            </tr>
-            <tr>
-              <td>单细胞基因组测序</td>
-              <td>解析单个细胞的基因组信息，揭示细胞异质性和克隆进化。</td>
-            </tr>
-            <tr>
-              <td>结构变异分析</td>
-              <td>检测基因组中的大规模结构变异，如缺失、重复、易位和倒位等。</td>
-            </tr>
-            <tr>
-              <td>RNA测序（RNA-Seq）</td>
-              <td>提供高通量的RNA测序服务，解析基因表达谱和可变剪接事件。</td>
-            </tr>
-            <tr>
-              <td>单细胞RNA测序</td>
-              <td>高精度分析单细胞的基因表达，揭示细胞异质性和发育轨迹。</td>
-            </tr>
-            <tr>
-              <td>miRNA测序</td>
-              <td>专注于小RNA（如miRNA）的测序和表达分析，探究基因调控机制。</td>
-            </tr>
-            <tr>
-              <td>长链非编码RNA测序</td>
-              <td>分析长链非编码RNA的表达和功能，揭示其在基因调控中的作用。</td>
-            </tr>
-            <tr>
-              <td>蛋白质鉴定与定量</td>
-              <td>利用质谱技术进行蛋白质鉴定与相对定量，揭示蛋白质表达变化。</td>
-            </tr>
-            <tr>
-              <td>磷酸化蛋白质组分析</td>
-              <td>专注于磷酸化修饰的蛋白质组学分析，探索信号通路调控机制。</td>
-            </tr>
-            <tr>
-              <td>蛋白质相互作用分析</td>
-              <td>通过免疫共沉淀（Co-IP）和质谱技术鉴定蛋白质相互作用网络。</td>
-            </tr>
-            <tr>
-              <td>质谱成像</td>
-              <td>应用质谱成像技术，空间分布上分析蛋白质和代谢物在组织中的分布。</td>
-            </tr>
-            <tr>
-              <td>非靶向代谢组分析</td>
-              <td>通过质谱技术进行全谱扫描，全面分析样本中的代谢物谱。</td>
-            </tr>
-            <tr>
-              <td>靶向代谢组分析</td>
-              <td>专注于特定代谢途径或代谢物的定量分析，提供更精确的数据。</td>
-            </tr>
-            <tr>
-              <td>代谢通路分析</td>
-              <td>综合分析代谢物数据，重建代谢通路并进行功能注释。</td>
-            </tr>
-            <tr>
-              <td>药物代谢分析</td>
-              <td>研究药物在生物体内的代谢途径和代谢产物，支持药物开发和安全性评价。</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row mt-3">
+          <div class="col-12">
+            <p class="mb-2">我们拥有丰富的项目经验，成功为多家试剂公司开发定制化的检测软件系统，集成IGV控件满足特定业务需求。在多组学生信分析领域，我们提供从数据预处理到结果解读的全流程服务，特别擅长PRS分析和机器学习在生物医学中的应用。</p>
+            
+            <p class="mb-0">我们的智能文献分析平台能够自动阅读和分析科学文献，按照ACMG指南规范进行遗传突变评级，为临床决策提供科学依据。通过持续的技术创新和专业的服务，我们致力于成为生物信息学领域的可靠合作伙伴。</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h3 class="mt-5">临床数据挖掘</h3>
-      <p>通过高效的数据挖掘技术，我们帮助临床研究人员从大量数据中提取有价值的信息，以支持临床决策和研究。我们的临床数据挖掘服务包括：</p>
+    <section id="services" class="homepage-section">
+      <h2 class="section-title">
+        <i class="fas fa-cogs me-3"></i>核心服务
+      </h2>
+      <div class="section-content">
+        
+        <div class="row mb-4">
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-laptop-code"></i> 检测软件系统开发</h3>
+              <p>为试剂公司定制开发专业的检测软件系统，集成IGV控件实现可视化基因组浏览和分析功能。</p>
+              <ul>
+                <li>定制化检测流程设计</li>
+                <li>IGV控件深度集成与优化</li>
+                <li>用户界面友好性设计</li>
+                <li>数据可视化与报告生成</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-chart-line"></i> 多组学生信分析</h3>
+              <p>提供全面的多组学数据分析服务，从基因组、转录组到蛋白质组和代谢组，为客户提供深入的数据洞察。</p>
+              <ul>
+                <li>基因组测序数据分析</li>
+                <li>转录组表达谱分析</li>
+                <li>多组学数据整合分析</li>
+                <li>生物标志物发现</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-brain"></i> 机器学习与PRS分析</h3>
+              <p>运用先进的机器学习算法进行生物医学数据分析，特别专注于多基因风险评分（PRS）分析。</p>
+              <ul>
+                <li>PRS模型构建与验证</li>
+                <li>疾病风险预测模型</li>
+                <li>个性化医疗方案设计</li>
+                <li>深度学习算法应用</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-10 offset-1">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>服务项目</th>
-              <th>详细描述</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>电子病历分析</td>
-              <td>对电子病历数据进行全面分析，挖掘潜在的临床模式和疾病关联。</td>
-            </tr>
-            <tr>
-              <td>临床试验数据管理</td>
-              <td>提供临床试验数据的管理和分析服务，确保数据的完整性和准确性。</td>
-            </tr>
-            <tr>
-              <td>生物标志物发现</td>
-              <td>通过数据挖掘技术，发现与疾病诊断和治疗相关的生物标志物。</td>
-            </tr>
-            <tr>
-              <td>疾病预测模型</td>
-              <td>建立和优化疾病预测模型，帮助医生进行早期诊断和个性化治疗。</td>
-            </tr>
-            <tr>
-              <td>数据整合与标准化</td>
-              <td>整合来自不同来源的临床数据，并进行标准化处理，提升数据分析的质量和效率。</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-robot"></i> 智能文献分析平台</h3>
+              <p>基于大模型技术开发的智能文献分析系统，能够自动阅读和分析科学文献，按照ACMG指南进行遗传变异评级。</p>
+              <ul>
+                <li>文献智能阅读与理解</li>
+                <li>ACMG指南规范评级</li>
+                <li>临床决策支持报告</li>
+                <li>知识图谱构建</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-cogs"></i> 技术咨询与培训</h3>
+              <p>为客户提供专业的技术咨询和培训服务，帮助客户更好地理解和使用生物信息学技术。</p>
+              <ul>
+                <li>生物信息学技术咨询</li>
+                <li>数据分析流程优化</li>
+                <li>软件工具使用培训</li>
+                <li>最佳实践指导</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="service-card">
+              <h3><i class="fas fa-project-diagram"></i> 定制化解决方案</h3>
+              <p>根据客户的具体需求，提供量身定制的生物信息学解决方案。</p>
+              <ul>
+                <li>个性化分析流程设计</li>
+                <li>专用软件工具开发</li>
+                <li>系统集成与部署</li>
+                <li>持续技术支持</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <h3 class="mt-5">软件开发</h3>
-      <p>我们开发定制的软件解决方案，帮助科学家和医学研究人员更高效地处理和分析数据。我们的软件开发服务包括：</p>
-
-      <div class="col-10 offset-1">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>服务项目</th>
-              <th>详细描述</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>数据管理系统</td>
-              <td>开发高效的数据管理系统，支持大规模数据的存储、检索和分析。</td>
-            </tr>
-            <tr>
-              <td>数据可视化工具</td>
-              <td>提供专业的数据可视化工具，帮助研究人员直观地展示和解释数据。</td>
-            </tr>
-            <tr>
-              <td>定制分析软件</td>
-              <td>根据客户需求开发定制化的数据分析软件，提升分析效率和准确性。</td>
-            </tr>
-            <tr>
-              <td>实验室信息管理系统（LIMS）</td>
-              <td>为实验室开发信息管理系统，优化实验室流程和数据管理。</td>
-            </tr>
-            <tr>
-              <td>移动应用开发</td>
-              <td>开发适用于生物医学领域的移动应用，支持数据采集、分析和共享。</td>
-            </tr>
-          </tbody>
-        </table>
+    <section id="contact" class="homepage-section">
+      <h2 class="section-title">
+        <i class="fas fa-envelope me-3"></i>联系我们
+      </h2>
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <div class="contact-item">
+                <h4><i class="fas fa-map-marker-alt"></i> 公司地址</h4>
+                <p>北京市朝阳区酒仙桥街道将台路</p>
+              </div>
+              
+              <div class="contact-item">
+                <h4><i class="fas fa-envelope"></i> 邮箱联系</h4>
+                <p><a href="mailto:service@bioinfo.app">service@bioinfo.app</a></p>
+              </div>
+              
+              <div class="contact-item">
+                <h4><i class="fas fa-phone"></i> 业务咨询</h4>
+                <p>请通过微信二维码联系我们，咨询时请注明来意</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="qr-card">
+              <h4><i class="fab fa-weixin"></i> 微信联系</h4>
+              <div class="qr-container">
+                <img class="img-fluid" src="images/wechat-qrcode.png" alt="微信二维码">
+              </div>
+              <p class="mt-3">扫描二维码添加微信</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <h2 class="section-title" id="contact">联系我们</h2>
-    <div class="section-content">
-      <p>地址：北京市朝阳区酒仙桥街道将台路</p>
-      <p>邮箱：service@bioinfo.app</p>
-      <p>微信二维码（联系请注明来意）：</p>
-      <img class="img-fluid mx-auto d-block" src="images/wechat-qrcode.png" alt="微信二维码" style="width: 150px; height: 150px;">
-    </div>
+    </section>
   </div>
 
   {{ partial "footer.html" . }}
