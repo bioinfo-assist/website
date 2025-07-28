@@ -1,82 +1,88 @@
-# 北京生信助力科技有限公司
-
-专注于生物信息学数据分析、临床数据挖掘和软件开发。
-
-## 快速开始
-
-### 安装依赖
-
-```bash
-# 安装Node.js依赖
-npm install
-```
-
-### 构建网站
-
-```bash
-# 使用npm构建（推荐）
-npm run build
-
-# 或者使用构建脚本
-./build.sh
-
-# 或者直接使用Hugo命令
-hugo --minify
-```
-
-构建完成后，网站文件将生成在 `public/` 目录中。
-
-### 开发模式
-
-```bash
-# 使用npm开发模式（推荐）
-npm run dev
-
-# 或者直接使用Hugo命令
-hugo server --bind 0.0.0.0 --port 1313
-```
-
-访问 http://localhost:1313 查看网站。
-
-### 复制资源
-
-```bash
-# 手动复制Bootstrap资源
-npm run copy-assets
-```
+# 生信助力科技有限公司网站
 
 ## 项目结构
 
+### 布局文件 (layouts/)
 ```
-.
-├── layouts/          # Hugo模板文件
-│   ├── _default/     # 默认模板
-│   ├── partials/     # 部分模板
-│   └── index.html    # 主页模板
-├── static/           # 静态资源
-│   ├── css/          # 样式文件
-│   ├── js/           # JavaScript文件
-│   └── images/       # 图片文件
-├── content/          # 内容文件
-├── scripts/          # 构建脚本
-├── hugo.toml         # Hugo配置文件
-├── package.json      # npm配置
-├── build.sh          # 构建脚本
-└── deploy.sh         # 部署脚本
+layouts/
+├── index.html                    # 主页面布局
+├── partials/
+│   ├── header.html              # 导航栏组件
+│   ├── footer.html              # 页脚组件
+│   ├── sections/                # 页面区块组件
+│   │   ├── hero.html           # 英雄区域
+│   │   ├── about.html          # 关于我们
+│   │   ├── services.html       # 核心服务
+│   │   └── contact.html        # 联系我们
+│   └── components/              # 可复用组件
+│       ├── service-card.html    # 服务卡片组件
+│       ├── feature-card.html    # 特色卡片组件
+│       └── contact-item.html    # 联系信息组件
 ```
 
-## 技术栈
-
-- Hugo - 静态网站生成器
-- Bootstrap 5 - CSS框架（通过npm管理）
-- Node.js - 包管理和构建工具
-- 响应式设计
-
-## 依赖管理
-
-Bootstrap通过npm管理，版本信息在 `package.json` 中。更新Bootstrap版本：
-
-```bash
-npm update bootstrap
-npm run copy-assets
+### 数据文件 (data/)
 ```
+data/
+├── services.yaml                # 服务信息数据
+└── contact.yaml                 # 联系信息数据
+```
+
+### 样式文件 (static/assets/css/)
+```
+static/assets/css/
+├── styles.css                   # Bootstrap样式
+└── custom.css                   # 自定义样式
+```
+
+## 重构亮点
+
+### 1. 模块化设计
+- 将页面内容按逻辑关系拆分为不同的partial文件
+- 每个section独立管理，便于维护和复用
+- 使用可复用的组件减少代码重复
+
+### 2. 数据驱动
+- 使用YAML数据文件管理内容
+- 服务信息和联系信息集中管理
+- 便于内容更新和维护
+
+### 3. Bootstrap优化
+- 充分利用Bootstrap的类名和变量
+- 使用语义化的CSS类名
+- 减少自定义样式，提高兼容性
+
+### 4. 代码简洁
+- 主布局文件从218行减少到12行
+- 通过partial文件实现逻辑分离
+- 避免重复代码，提高可维护性
+
+## 使用说明
+
+### 添加新服务
+1. 在 `data/services.yaml` 中添加服务信息
+2. 服务会自动显示在页面上
+
+### 修改联系信息
+1. 在 `data/contact.yaml` 中修改联系信息
+2. 联系信息会自动更新
+
+### 添加新页面区块
+1. 在 `layouts/partials/sections/` 中创建新的section文件
+2. 在主布局文件中引用新的section
+
+## 样式规范
+
+### 颜色变量
+- 使用CSS变量定义颜色主题
+- 遵循Bootstrap的配色方案
+- 自定义变量以 `--bioinfo-` 前缀命名
+
+### 响应式设计
+- 使用Bootstrap的栅格系统
+- 遵循移动优先的设计原则
+- 使用Bootstrap的断点进行适配
+
+### 组件样式
+- 使用语义化的类名
+- 保持样式的一致性
+- 优先使用Bootstrap类名，必要时才自定义

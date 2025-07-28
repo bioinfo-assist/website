@@ -1,0 +1,26 @@
+{{/* Contact Section */}}
+<section id="contact" class="homepage-section">
+  <h2 class="section-title">
+    <i class="fas fa-envelope me-3"></i>联系我们
+  </h2>
+  <div class="section-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          {{ partial "components/contact-item.html" .Site.Data.contact.contact.address }}
+          {{ partial "components/contact-item.html" .Site.Data.contact.contact.email }}
+          {{ partial "components/contact-item.html" .Site.Data.contact.contact.phone }}
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <div class="qr-card">
+          <h4><i class="{{ .Site.Data.contact.contact.wechat.icon }}"></i> {{ .Site.Data.contact.contact.wechat.title }}</h4>
+          <div class="qr-container">
+            <img class="img-fluid" src="{{ .Site.Data.contact.contact.wechat.qr_image }}" alt="微信二维码">
+          </div>
+          <p class="mt-3">{{ .Site.Data.contact.contact.wechat.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

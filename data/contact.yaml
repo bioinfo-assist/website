@@ -1,0 +1,22 @@
+# 联系信息数据
+contact:
+  address:
+    title: "公司地址"
+    icon: "fas fa-map-marker-alt"
+    content: "北京市朝阳区酒仙桥街道将台路"
+  
+  email:
+    title: "邮箱联系"
+    icon: "fas fa-envelope"
+    content: "<a href='mailto:service@bioinfo.app'>service@bioinfo.app</a>"
+  
+  phone:
+    title: "业务咨询"
+    icon: "fas fa-phone"
+    content: "请通过微信二维码联系我们，咨询时请注明来意"
+  
+  wechat:
+    title: "微信联系"
+    icon: "fab fa-weixin"
+    qr_image: "images/wechat-qrcode.png"
+    description: "扫描二维码添加微信" 

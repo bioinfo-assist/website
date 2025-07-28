@@ -1,0 +1,18 @@
+{{/* Services Section */}}
+<section id="services" class="homepage-section">
+  <h2 class="section-title">
+    <i class="fas fa-cogs me-3"></i>核心服务
+  </h2>
+  <div class="section-content">
+    <div class="row">
+      {{ range $index, $service := .Site.Data.services.services }}
+        <div class="col-lg-4 mb-4">
+          {{ partial "components/service-card.html" $service }}
+        </div>
+        {{ if eq (mod $index 3) 2 }}
+          </div><div class="row">
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section> 

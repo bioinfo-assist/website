@@ -1,0 +1,10 @@
+{{/* Service Card Component */}}
+<div class="service-card">
+  <h3><i class="{{ .icon }}"></i> {{ .title }}</h3>
+  <p>{{ .description }}</p>
+  <ul>
+    {{ range .features }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</div> 

@@ -1,0 +1,12 @@
+{{/* Feature Card Component */}}
+<div class="feature-card">
+  <div class="feature-icon">
+    <i class="{{ .icon }}"></i>
+  </div>
+  <h4>{{ .title }}</h4>
+  <ul class="feature-list">
+    {{ range .features }}
+    <li><i class="fas fa-check"></i> {{ . }}</li>
+    {{ end }}
+  </ul>
+</div> 
