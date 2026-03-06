@@ -4,6 +4,7 @@
   "description": "专注于生物信息学数据分析、临床数据挖掘和软件开发。",
   "main": "index.js",
   "scripts": {
+    "upgrade": "npx npm-check-updates -u && npm install",
     "build": "vite build && hugo --minify",
     "dev": "vite build && hugo server --bind 0.0.0.0 --port 13131",
     "build:assets": "vite build",
