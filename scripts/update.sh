@@ -61,10 +61,11 @@ else
     git pull origin $CURRENT_BRANCH
     
     log "📦 安装依赖..."
-    npm install
+    npm ci
     
     log "🏗️  开始构建..."
     npm run build
+	hugo
     
     log "✅ 更新完成！"
 fi
