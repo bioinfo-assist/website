@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  publicDir: false,
   build: {
     outDir: 'static/assets',
     rollupOptions: {
@@ -20,7 +21,7 @@ export default defineConfig({
         }
       }
     },
-    emptyOutDir: false
+    emptyOutDir: true
   },
   css: {
     preprocessorOptions: {
