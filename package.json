@@ -30,11 +30,16 @@
   },
   "homepage": "https://github.com/bioinfo-assist/bioinfo.app#readme",
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "immutable": "^5.1.9"
   },
   "devDependencies": {
     "esbuild": "^0.28.1",
     "sass": "^1.97.3",
     "vite": "^8.0.16"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.5.1": true,
+    "esbuild@0.28.1": true
   }
 }
