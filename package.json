@@ -31,7 +31,8 @@
   "homepage": "https://github.com/bioinfo-assist/bioinfo.app#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "immutable": "^5.1.9"
+    "immutable": "^5.1.9",
+    "postcss": "^8.5.25"
   },
   "devDependencies": {
     "esbuild": "^0.28.1",
