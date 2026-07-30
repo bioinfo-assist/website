@@ -10,11 +10,11 @@ static/assets/
 hugo_stats.json
 
 # Old static files (migrated to static/)
-css/
-js/
-images/
-index.html
-favicon.ico
+/css/
+/js/
+/images/
+/index.html
+/favicon.ico
 
 # Node.js
 node_modules/
