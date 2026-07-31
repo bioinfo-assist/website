@@ -1,9 +1,6 @@
 // Import Bootstrap JavaScript
 import 'bootstrap/dist/js/bootstrap.bundle.js'
 
-// Custom JavaScript can be added here
-console.log('Bootstrap loaded successfully!')
-
 // 平滑滚动功能
 document.addEventListener('DOMContentLoaded', function() {
   const links = document.querySelectorAll('a[href^="#"]');

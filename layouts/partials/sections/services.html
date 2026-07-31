@@ -5,14 +5,11 @@
   </h2>
   <div class="section-content">
     <div class="row">
-      {{ range $index, $service := .Site.Data.services.services }}
+      {{ range .Site.Data.services.services }}
         <div class="col-lg-4 mb-4">
-          {{ partial "components/service-card.html" $service }}
+          {{ partial "components/service-card.html" . }}
         </div>
-        {{ if eq (mod $index 3) 2 }}
-          </div><div class="row">
-        {{ end }}
       {{ end }}
     </div>
   </div>
-</section> 
+</section>

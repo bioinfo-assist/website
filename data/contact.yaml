@@ -13,7 +13,7 @@ contact:
   phone:
     title: "业务咨询"
     icon: "fas fa-phone"
-    content: "请通过微信二维码联系我们，咨询时请注明来意"
+    content: "请通过微信二维码联系我们，咨询时请注明来意。"
   
   wechat:
     title: "微信联系"

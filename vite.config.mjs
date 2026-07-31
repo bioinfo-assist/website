@@ -2,6 +2,9 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  // The Vite outDir (static/assets) is served at /assets/ by Hugo,
+  // so asset URLs must be generated relative to that mount point.
+  base: '/assets/',
   publicDir: false,
   build: {
     outDir: 'static/assets',

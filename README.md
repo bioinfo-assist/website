@@ -5,15 +5,17 @@
 ### 布局文件 (layouts/)
 ```
 layouts/
-├── index.html                    # 主页面布局
+├── index.html                    # 主页面布局（仅组装各区块 partial）
+├── _default/
+│   └── baseof.html              # 页面骨架（head/meta/SEO/结构化数据）
 ├── partials/
 │   ├── header.html              # 导航栏组件
 │   ├── footer.html              # 页脚组件
 │   ├── sections/                # 页面区块组件
 │   │   ├── hero.html           # 英雄区域
 │   │   ├── about.html          # 关于我们
-│   │   ├── services.html       # 核心服务
-│   │   └── contact.html        # 联系我们
+│   │   ├── services.html       # 核心服务（数据驱动）
+│   │   └── contact.html        # 联系我们（数据驱动）
 │   └── components/              # 可复用组件
 │       ├── service-card.html    # 服务卡片组件
 │       ├── feature-card.html    # 特色卡片组件
@@ -23,40 +25,46 @@ layouts/
 ### 数据文件 (data/)
 ```
 data/
-├── services.yaml                # 服务信息数据
-└── contact.yaml                 # 联系信息数据
+├── services.yaml                # 服务信息数据（页面服务区块唯一内容来源）
+└── contact.yaml                 # 联系信息数据（页面联系区块唯一内容来源）
 ```
 
-### 样式文件 (static/assets/css/)
+### 前端资源 (src/)
 ```
-static/assets/css/
-├── styles.css                   # Bootstrap样式
-└── custom.css                   # 自定义样式
+src/
+├── main.js                      # 入口：Bootstrap JS、Font Awesome（自托管）
+└── styles.scss                  # 样式（Bootstrap SCSS + 自定义主题变量）
 ```
 
-## 重构亮点
+## 设计说明
 
 ### 1. 模块化设计
-- 将页面内容按逻辑关系拆分为不同的partial文件
-- 每个section独立管理，便于维护和复用
-- 使用可复用的组件减少代码重复
+- 页面内容按逻辑关系拆分为 partial 文件，主布局只负责组装
+- 服务、联系信息由 YAML 数据文件驱动，页面模板只负责渲染
 
-### 2. 数据驱动
-- 使用YAML数据文件管理内容
-- 服务信息和联系信息集中管理
-- 便于内容更新和维护
+### 2. 单一内容来源
+- 服务卡片内容：只改 `data/services.yaml`
+- 联系信息：只改 `data/contact.yaml`
+- 站点级信息（title/description/email/address/keywords）：只改 `hugo.toml`
+- 页面区块的静态文案：改对应的 `layouts/partials/sections/*.html`
 
-### 3. Bootstrap优化
-- 充分利用Bootstrap的类名和变量
-- 使用语义化的CSS类名
-- 减少自定义样式，提高兼容性
-
-### 4. 代码简洁
-- 主布局文件从218行减少到12行
-- 通过partial文件实现逻辑分离
-- 避免重复代码，提高可维护性
+### 3. 前端构建
+- 前端资源由 Vite 构建到 `static/assets/`（已 gitignore，勿直接编辑）
+- 依赖本地化：Bootstrap、Font Awesome 均从 npm 打包，无外部 CDN 依赖
+- 中文字体使用系统字体栈（PingFang SC / Microsoft YaHei 等），不加载外部字体
 
 ## 使用说明
+
+### 本地开发
+```bash
+npm install
+npm run dev        # 构建资源并启动 Hugo 开发服务器
+```
+
+### 生产构建
+```bash
+npm run build      # Vite 构建资源 + Hugo 构建站点到 public/
+```
 
 ### 添加新服务
 1. 在 `data/services.yaml` 中添加服务信息
@@ -67,22 +75,22 @@ static/assets/css/
 2. 联系信息会自动更新
 
 ### 添加新页面区块
-1. 在 `layouts/partials/sections/` 中创建新的section文件
-2. 在主布局文件中引用新的section
+1. 在 `layouts/partials/sections/` 中创建新的 section 文件
+2. 在主布局文件中引用新的 section
 
 ## 样式规范
 
 ### 颜色变量
-- 使用CSS变量定义颜色主题
-- 遵循Bootstrap的配色方案
+- 使用 CSS 变量定义颜色主题
+- 遵循 Bootstrap 的配色方案
 - 自定义变量以 `--bioinfo-` 前缀命名
 
 ### 响应式设计
-- 使用Bootstrap的栅格系统
+- 使用 Bootstrap 的栅格系统
 - 遵循移动优先的设计原则
-- 使用Bootstrap的断点进行适配
+- 使用 Bootstrap 的断点进行适配
 
 ### 组件样式
 - 使用语义化的类名
 - 保持样式的一致性
-- 优先使用Bootstrap类名，必要时才自定义
+- 优先使用 Bootstrap 类名，必要时才自定义

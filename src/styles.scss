@@ -1,6 +1,9 @@
 // Import Bootstrap SCSS
 @use "bootstrap/scss/bootstrap";
 
+// Self-hosted Font Awesome icons (avoids external CDN dependency)
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 // Custom variables for modern bioinformatics theme
 :root {
   --primary-color: #00d4aa;
@@ -264,6 +267,13 @@ p {
 }
 
 // Stats Card
+.stats-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
 .stats-card {
   background: var(--card-bg);
   border-radius: 16px;
@@ -281,7 +291,7 @@ p {
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--primary-color);
   font-family: 'JetBrains Mono', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Courier New', monospace;

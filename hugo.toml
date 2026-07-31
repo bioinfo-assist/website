@@ -3,12 +3,11 @@ locale = 'zh-cn'
 title = '北京生信助力科技有限公司'
 
 [params]
-  description = "北京生信助力科技有限公司专注于生物信息学数据分析、临床数据挖掘和软件开发，开发用于科学和医学项目的高性能计算和深度学习算法，提供科研相关服务。"
+  description = "北京生信助力科技有限公司专注于检测软件系统开发、多组学分析与机器学习应用，为试剂公司、科研机构和医疗机构提供生物信息学解决方案与智能文献分析服务。"
   author = "北京生信助力科技有限公司"
-  email = "contact@bioinfo.app"
-  phone = "+86-xxx-xxxx-xxxx"
-  address = "北京市"
-  keywords = "生物信息学, 数据分析, 临床数据挖掘, 软件开发, 高性能计算, 深度学习, 科研服务"
+  email = "service@bioinfo.app"
+  address = "北京市朝阳区酒仙桥街道将台路"
+  keywords = "生物信息学, 多组学分析, 检测软件系统开发, 机器学习, PRS分析, 智能文献分析, 遗传变异评级, 科研服务"
 
 [build]
   writeStats = true
