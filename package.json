@@ -6,7 +6,7 @@
   "scripts": {
     "upgrade": "npx npm-check-updates -u && npm install",
     "build": "vite build && hugo --minify",
-    "dev": "vite build && hugo server --bind 0.0.0.0 --port 13131",
+    "dev": "vite build && hugo server",
     "build:assets": "vite build",
     "dev:assets": "vite build --watch",
     "preview": "vite preview",
@@ -24,7 +24,7 @@
     "vite"
   ],
   "author": "北京生信助力科技有限公司",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bioinfo-assist/bioinfo.app/issues"
   },
