@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.25 89.85 417 325" width="100%" height="100%">
+  <defs>
+    <!-- Subtle linear gradient: slight brightness shift, like natural light reflection -->
+    <linearGradient id="logoGrad"
+                    gradientUnits="userSpaceOnUse"
+                    x1="-42.25" y1="46.85" x2="464.75" y2="618.65">
+      <stop offset="0%"   stop-color="#66C4F0" />
+      <stop offset="50%"  stop-color="#0083D7" />
+      <stop offset="100%" stop-color="#0070B8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main circle -->
+  <path d="M 295,111 A 150 150 0 1 0 230,404"
+        fill="none" stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <path d="M 282,404 A 150 150 0 0 0 362,150"
+        fill="none" stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Small arc -->
+  <path d="M 381,109 A 25 25 0 1 0 362,150"
+        fill="none" stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Upper inner ellipse -->
+  <path d="M 252,152 A 52 65 0 1 0 319,235"
+        fill="none" stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <!-- Lower inner ellipse -->
+  <path d="M 282,404 A 52 65 0 1 0 215,321"
+        fill="none" stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Inner segments -->
+  <line x1="221" y1="191" x2="286" y2="191"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <line x1="221" y1="235" x2="286" y2="235"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <line x1="248" y1="321" x2="313" y2="321"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <line x1="248" y1="365" x2="313" y2="365"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Speed lines -->
+  <line x1="30" y1="256" x2="70" y2="256"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <line x1="10" y1="316" x2="80" y2="316"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+  <line x1="70" y1="376" x2="112" y2="376"
+        stroke="url(#logoGrad)" stroke-width="20" stroke-linecap="round" />
+
+  <!-- Text -->
+</svg>
