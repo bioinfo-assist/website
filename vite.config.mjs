@@ -7,8 +7,8 @@ export default defineConfig({
     outDir: 'static/assets',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/main.js'),
-        styles: resolve(__dirname, 'src/styles.scss')
+        main: resolve(import.meta.dirname, 'src/main.js'),
+        styles: resolve(import.meta.dirname, 'src/styles.scss')
       },
       output: {
         entryFileNames: 'js/[name].js',
