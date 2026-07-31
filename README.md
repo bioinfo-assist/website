@@ -18,7 +18,6 @@ layouts/
 │   │   └── contact.html        # 联系我们（数据驱动）
 │   └── components/              # 可复用组件
 │       ├── service-card.html    # 服务卡片组件
-│       ├── feature-card.html    # 特色卡片组件
 │       └── contact-item.html    # 联系信息组件
 ```
 
